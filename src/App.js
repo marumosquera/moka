@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import logo from "./MOKATOKEN.svg";
 
 function App() {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        "service_j5o75ue",
+        "template_3iina5k",
+        form.current,
+        "CfIN4KgjIIwl9jBGu"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setLoading(false);
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <img src={logo}></img>
+      <p>Sumate a la waitlist, ¿o te lo vas a perder?</p>
+      <form ref={form} onSubmit={sendEmail}>
+        <textarea name="message" placeholder="Ingresa tu address o email" />
+        {loading ? (
+          <input value="enviando" />
+        ) : (
+          <input type="submit" value="enviar" />
+        )}
+      </form>
+    </>
   );
 }
 
