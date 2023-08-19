@@ -1,4 +1,5 @@
 .App {
+  
   background-color: black;
   color: white;
   display: flex;
@@ -8,7 +9,7 @@
 }
 
 .logo {
-  max-width: 70%; /* make sure it doesn't overflow its container */
+  max-width: 50%; /* make sure it doesn't overflow its container */
 }
 
 .home {
@@ -16,7 +17,6 @@
   flex-direction: column;
   align-items: center; /* center children horizontally */
   text-align: center; /* center text of direct children */
-  max-width: 1000px; /* or whatever maximum width you prefer */
   width: 100%;
   margin: 0 auto; /* this will center the section horizontally if its width is less than its parent's width */
   padding: 20px; /* add some spacing around */
@@ -161,7 +161,9 @@ textarea::placeholder {
 
 /* Mobile-first styles */
 .pitch-section {
-  height: 100vh;
+  height: max-content;
+  min-height: 100vh;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,4 +211,35 @@ textarea::placeholder {
   .pitch-section > p {
     font-size: 18px; /* Reset font size for larger screens */
   }
+}
+
+@media screen and (max-width: 769px) {
+.home{
+  height: 100vh;
+  width: 100vw;
+}
+.home > h2,
+textarea {
+  width: 300px;
+}
+
+.logo{
+  margin-top: 33%;
+}
+
+.btn{
+  width: 300px;
+}
+
+/* .title{
+  width: 350px;
+} */
+
+.home{
+  width: fit-content;
+}
+
+.pitch-section{
+  height: 100%;
+}
 }

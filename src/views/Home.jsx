@@ -37,7 +37,7 @@ export const Home = () => {
     <section className="home">
       <img src={logo} className="logo"></img>
       <div className="moka-section">
-      <h2>Sumate a la waitlist, ¿o te lo vas a perder?</h2>
+      <h2 className="title">Sumate a la waitlist, ¿o te lo vas a perder?</h2>
       <form ref={form} onSubmit={sendEmail}>
         <textarea name="message" placeholder="Ingresa tu address o email" />
  
