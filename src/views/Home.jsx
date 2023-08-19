@@ -53,7 +53,7 @@ export const Home = () => {
       </form>
 
       <div className="bottom">
-        <a href="" className="twitter">   <ImTwitter /> </a>
+        <a href="https://x.com/mokatoken?s=21" className="twitter">   <ImTwitter /> </a>
      
         <div>
           <p>Aprendé más sobre MOKA</p>
