@@ -11,8 +11,8 @@ function App() {
  
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/pitchEN" element={<PitchEsp />} />
-          <Route path="/pitchES" element={<PitchEng />} />
+          <Route path="/pitchES" element={<PitchEsp />} />
+          <Route path="/pitchEN" element={<PitchEng />} />
         </Routes>
         
     </div>

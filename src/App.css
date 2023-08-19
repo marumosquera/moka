@@ -22,7 +22,7 @@
   padding: 20px; /* add some spacing around */
 }
 
-.home >h1{
+.home > h1 {
   text-align: center;
 }
 .home > h2,
@@ -56,9 +56,9 @@ textarea {
   width: 100%;
   max-width: 426px;
   color: white;
-  padding-top:2%;
-  padding-bottom: 1% ;
-  padding-left:5% ;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  padding-left: 5%;
   padding-right: 5%;
   flex-shrink: 0;
   font-family: Raleway; /* Added this from the ::placeholder to ensure consistent font */
@@ -110,7 +110,7 @@ textarea::placeholder {
   padding: 1%;
 }
 
-.espanol{
+.espanol {
   display: inline-block;
   color: #fff;
   font-size: 12px;
@@ -120,11 +120,11 @@ textarea::placeholder {
   padding: 1%;
 }
 
-.espanol:hover{
-font-weight: 900;
+.espanol:hover {
+  font-weight: 900;
 }
 
-.english:hover{
+.english:hover {
   font-weight: 900;
 }
 
@@ -149,12 +149,64 @@ font-weight: 900;
   }
 }
 
-.twitter{
+.twitter {
   font-size: 35px;
   color: #fff;
   margin-right: 5%;
 }
 
-.twitter:hover{
-color: #00acee;
+.twitter:hover {
+  color: #00acee;
+}
+
+/* Mobile-first styles */
+.pitch-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Added padding for better spacing */
+}
+
+.pitch-section > h1 {
+  border-radius: 25px;
+  border: 5px solid #ff579f;
+  background: #ff579f;
+  width: 100%;
+  max-width: 80%; /* Adjusted max-width for responsiveness */
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  font-size: 24px; /* Slightly reduced font size for better fit */
+  font-weight: 400;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 1%;
+}
+
+.pitch-section > p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  padding: 1rem; /* Adjusted padding for better spacing */
+  font-size: 16px; /* Reduced font size for mobile devices */
+  font-weight: 900;
+  max-width: 100%; /* Full width for mobile devices */
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  /* Media query for larger screens */
+  .pitch-section > h1 {
+    font-size: 36px; /* Reset font size for larger screens */
+    max-width: 426px;
+  }
+
+  .pitch-section > p {
+    font-size: 18px; /* Reset font size for larger screens */
+  }
 }
